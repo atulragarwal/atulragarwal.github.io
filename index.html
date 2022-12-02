@@ -2,8 +2,248 @@
 <html>
     <head>
         <title>Atul Agarwal</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <style>
+            body{
+                font-family: "Lato";
+                /* display: flex; */
+                /* flex-direction: column; */
+                padding: 0;
+                margin: 0;
+            }
+            section{
+                display: inline;
+            }
+            .image{
+                /* margin-left: 0; */
+                /* grid-area: image; */
+                width: 20%;
+                display: flex;
+                justify-content: center;
+            }
+            .content{
+                padding-left: 20px;
+                /* grid-area: workContent; */
+                /* height: ; */
+                /* width: 20%; */
+            }
+            .introContainer{
+                display: flex;
+                /* margin-top: 15px; */
+            }
+            .researchContainer{
+                /* display: grid; */
+                /* grid-template-areas: image workContent workContent workContent; */
+                width: 100%;
+                /* padding-bottom: 100px; */
+                /* margin-left: 10%; */
+                /* margin-right: 10%; */
+            }
+            .researchContainerContent{
+                margin-top:50px;
+                display: flex;
+                justify-content: space-between;
+                /* border: 2px solid black; */
+                width: 75%;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            .sharedContainer{
+                width: 50%;
+                height: 20%;
+                display: flex;
+                justify-content: center;
+                margin-top: 8%;
+            }
+            #profileImage{
+                width : 50%;
+                height: auto;
+                border-radius: 10%;
+                border: 2px solid black;
+            }
+            #introContent{
+                font-size: large;
+                margin-top: 0px;
+                margin-right: 50px;
+            }
+            .headStyle{
+                font-size: 80px;
+                margin-bottom: 0px;
+            }
+            .navBar{
+                position: fixed;
+                margin-top: 0px;
+                width: 100%;
+                background-color: black;
+                color: white;
+                display: flex;
+                height: 10%;
+                /* margin-bottom: 200px; */
+                font-size: 30px;
+                text-align: center;
+                /* vertical-align: middle; */
+            }
+            .navItem{
+                margin-top: 0px;
+                text-align: center;
+                padding: 10px;
+            }
+            .navItem:hover{
+                background-color: white;
+                color: black;
+            }
+            .navBar > a{
+                color: white;
+                text-decoration: none;
+            }
+            .navBar > a:hover{
+                color: black;
+                border:1px solid black
+            }
+            #break{
+                margin-left: auto;
+            }
+            .breakClass{
+                background-color: black;
+                color: white;
+                width : 100%;
+            }
+            .projectBox{
+                display:flex;
+                flex-direction: column;
+                /* width: 25%; */
+                border: 1px solid black;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+            .boxImage > img{
+                width:100%;
+            }
+            .boxContent{
+                font-size: 20px;
+                text-decoration: none;
+                color: white;
+                background-color: black;
+            }
+            .boxContent > a{
+                color: white;
+                text-decoration: none;
+                text-align: center;
+            }
+            .boxContent:hover{
+                background-color: white;
+                color: black;
+            }
+            .boxContent > a:hover{
+                color: black;
+            }
+            .projectContainerContent{
+                margin-left: 20px;
+                margin-right: 20px;
+                display: grid;
+                grid-template-columns: auto auto auto;
+                gap: 20px;
+            }
+            #project{
+                margin-bottom: 20px;
+            }
+        </style>
     </head>
     <body>
-        <h1>Hello</h1>
+        <div class="navBar">
+            <!-- <div class = "navItem">About</div> -->
+                <a class = "navItem" href="#about">About</a>
+            <!-- <div class = "navItem" id="break"> -->
+                <a class = "navItem" id = "break" href="#research">Research</a>
+            <!-- </div> -->
+            <!-- <div class = "navItem"> -->
+                <a class = "navItem" href="#project">Projects</a>
+            <!-- </div> -->
+        </div>
+        <div class = "introContainer" id="about">
+            <div class ="sharedContainer">
+                <img id = "profileImage" src = "image.jpg">
+            </div>
+            <div class = "sharedContainer" style="justify-content: flex-start; flex-direction: column;">
+                <h1 class="headStyle">Hi, I'm Atul.</h1><br>
+                <p id = "introContent">I enjoy developing machine learning and deep learning based solutions for real world problems. I have worked on developing models to process and understand images and audio files. I worked on developing a semantic segmentation model to help detect ships in satellite images. I have made use of machine learning on audio signals to develop a voice activity detection model.</p>
+                <p id="introContent">My experiences have helped shape my goals. I wish to work towards implementing image and audio processing in the automobile industry. I believe there are more applications of AI in the field than just self-driving cars.</p>
+                <p id="introContent">I plan on implementing machine learning models to develop systems that can understand and analyze our driving techniques to suggest modifications that help improve fuel economy and overall automobile performance. I look forward to improving user experience and safety in the automobile industry.</p>
+            </div>
+        </div>
+        <div class = "researchContainer" id="research">
+            <h1 class="breakClass" style="display: flex;justify-content: center;margin-bottom:20px; font-size: 50px;">Research</h1>
+            <div class = "researchContainerContent">
+                <div class = "image">
+                    <img style="border-radius: 10%;" src = "audio.jpg" width="100%">
+                </div>
+                <div class = "content">
+                    <p class = "headStyle" style="font-size: 40px;">A Method for Voice Activity Detection using K Means Clustering</p>
+                    <p>Atul Rohit Agarwal, Sourabh Tiwari, Vinay Patage, Sankar Ganesh S, Sudhakar M S, 2022</p>
+                </div>
+            </div>
+        </div>
+        <div class = "researchContainer" id="project">
+            <h1 class="breakClass" style="display: flex;justify-content: center;margin-bottom:20px; font-size: 50px;">Projects</h1>
+            <div class = "projectContainerContent">
+                <!-- <div class = "image">
+                    <img style="border-radius: 10%;" src = "audio.jpg" width="100%">
+                </div>
+                <div class = "content">
+                    <p class = "headStyle" style="font-size: 40px;">A Method for Voice Activity Detection using K Means Clustering</p>
+                    <p>Atul Rohit Agarwal, Sourabh Tiwari, Vinay Patage, Sankar Ganesh S, Sudhakar M S, 2022</p>
+                </div> -->
+                <div class = "projectBox">
+                    <div class="boxImage">
+                        <img src="ACN-UNET.jpg" height ="200">
+                    </div>
+                    <div class="boxContent">
+                        <a href="https://github.com/atulragarwal/ACN-UNET">
+                            <p>ACN U-NET for Semantic Segmentation</p>
+                        </a>
+                    </div>
+                </div>
+                <div class = "projectBox">
+                    <div class="boxImage">
+                        <img src="anomaly.jpg" height ="200">
+                    </div>
+                    <div class="boxContent">
+                        <a href="">
+                            <p>Anomaly Detection using Machine Learning</p>
+                        </a>
+                    </div>
+                </div>
+                <div class = "projectBox">
+                    <div class="boxImage">
+                        <img src="round robin.jpg" height ="200">
+                    </div>
+                    <div class="boxContent">
+                        <a href="https://github.com/atulragarwal/Priority-Based-Round-Robin-CPU-Scheduling-Algorithm">
+                            <p>Priority Based Round Robin CPU Scheduling</p>
+                        </a>
+                    </div>
+                </div>
+                <div class = "projectBox">
+                    <div class="boxImage">
+                        <img src="gige.png" height ="200">
+                    </div>
+                    <div class="boxContent">
+                        <a href="https://github.com/atulragarwal/GiGe">
+                            <p>GiGe: Give and Get</p>
+                        </a>
+                    </div>
+                </div>
+                <div class = "projectBox">
+                    <div class="boxImage">
+                        <img src="vaccine.png" height ="200">
+                    </div>
+                    <div class="boxContent">
+                        <a href="react-cowin.web.app">
+                            <p>COVID Vaccine Dashboard</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
